@@ -125,7 +125,8 @@
     if (downloadBtn) {
       downloadBtn.addEventListener('click', function() {
         if (BASE_URL && BASE_URL.startsWith('http')) {
-          const url = repoName ? `${BASE_URL}?repo_name=${encodeURIComponent(repoName)}` : BASE_URL;
+          // const url = repoName ? `${BASE_URL}?repo_name=${encodeURIComponent(repoName)}` : BASE_URL;
+          const url = BASE_URL;
           window.open(url, '_blank');
           downloadBtn.innerHTML = '<i class="fas fa-check"></i> Started!';
           downloadBtn.disabled = true;
